@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "155330342347",
+    "firebase_url": "https://todos-a80c7.firebaseio.com",
+    "project_id": "todos-a80c7",
+    "storage_bucket": "todos-a80c7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155330342347:android:e84c6de46862c0ab",
+        "android_client_info": {
+          "package_name": "org.ecaib.todos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "155330342347-4ntjf05odecueb5v8pot70n5c8ji3v1k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDS9MUCMd1kyRUJq42RpXPYOa5f1p0F2ro"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "155330342347-4ntjf05odecueb5v8pot70n5c8ji3v1k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155330342347:android:6161c6b168b62e63",
+        "android_client_info": {
+          "package_name": "mysupercompany.bicicling"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "155330342347-4ntjf05odecueb5v8pot70n5c8ji3v1k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDS9MUCMd1kyRUJq42RpXPYOa5f1p0F2ro"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "155330342347-4ntjf05odecueb5v8pot70n5c8ji3v1k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
