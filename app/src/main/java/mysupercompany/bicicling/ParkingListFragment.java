@@ -2,6 +2,7 @@ package mysupercompany.bicicling;
 
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,13 +33,14 @@ public class ParkingListFragment extends Fragment {
         Firebase ref = app.getRef();
 
         Firebase parkings = ref.child("stations");
+        Log.d("STATIONS", parkings.toString());
 
         adapter = new FirebaseListAdapter<Park>(getActivity(), Park.class, R.layout.row, parkings) {
             @Override
             protected void populateView(View view, Park parking, int position) {
 
                 TextView tvName = (TextView) view.findViewById(R.id.tvName);
-                tvName.setText(parking.getName());
+                tvName.setText(parking.getStreetName());
             }
         };
 
