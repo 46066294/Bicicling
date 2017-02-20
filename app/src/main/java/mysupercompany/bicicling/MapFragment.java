@@ -170,7 +170,7 @@ public class MapFragment extends Fragment {
                     else if (parking.getIndicator() <= 75 && parking.getIndicator() > 50){
                         marker.setIcon(getResources().getDrawable(R.drawable.circleth));
                     }
-                    else if (parking.getIndicator() <= 95 && parking.getIndicator() > 75){
+                    else if (parking.getIndicator() <= 100 && parking.getIndicator() > 75){
                         marker.setIcon(getResources().getDrawable(R.drawable.circlefour));
                     }
 
