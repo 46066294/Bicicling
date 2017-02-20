@@ -27,6 +27,7 @@ public class MyApp extends Application {
 
         super.onCreate();
         Firebase.setAndroidContext(this);
+        Firebase.getDefaultConfig().setPersistenceEnabled(true);
 
         ref = new Firebase("https://todos-a80c7.firebaseio.com/");
     }

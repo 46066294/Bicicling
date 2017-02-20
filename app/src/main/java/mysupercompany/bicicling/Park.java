@@ -105,4 +105,21 @@ public class Park {
     public void setStatus(String status) {
         this.status = status;
     }
+
+    @Override
+    public String toString() {
+        return "Park{" +
+                "id='" + id + '\'' +
+                ", type='" + type + '\'' +
+                ", latitude='" + latitude + '\'' +
+                ", longitude='" + longitude + '\'' +
+                ", streetName='" + streetName + '\'' +
+                ", streetNumber='" + streetNumber + '\'' +
+                ", altitude='" + altitude + '\'' +
+                ", slots='" + slots + '\'' +
+                ", bikes='" + bikes + '\'' +
+                ", nearbyStations='" + nearbyStations + '\'' +
+                ", status='" + status + '\'' +
+                '}';
+    }
 }

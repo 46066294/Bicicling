@@ -107,11 +107,11 @@ public class MapFragment extends Fragment {
             }
         });
 
-/*
+
         mMinimapOverlay = new MinimapOverlay(getContext(), map.getTileRequestCompleteHandler());
-        mMinimapOverlay.setWidth(dm.widthPixels / 5);
+        mMinimapOverlay.setWidth(dm.widthPixels / 2);
         mMinimapOverlay.setHeight(dm.heightPixels / 5);
-*/
+
 
         mScaleBarOverlay = new ScaleBarOverlay(map);
         mScaleBarOverlay.setCentred(true);
@@ -125,7 +125,7 @@ public class MapFragment extends Fragment {
         mCompassOverlay.enableCompass();
 
         map.getOverlays().add(myLocationOverlay);
-        //map.getOverlays().add(this.mMinimapOverlay);
+        map.getOverlays().add(this.mMinimapOverlay);
         map.getOverlays().add(this.mScaleBarOverlay);
         map.getOverlays().add(this.mCompassOverlay);
     }
@@ -159,6 +159,8 @@ public class MapFragment extends Fragment {
                     marker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
                     marker.setIcon(getResources().getDrawable(R.drawable.parking));
                     marker.setTitle(parking.getStreetName());
+                    //marker.setSubDescription(parking.getType());
+                    marker.setSubDescription(parking.toString());
                     marker.setAlpha(0.6f);
 
                     parkingMarkers.add(marker);

@@ -41,6 +41,7 @@ public class ParkingListFragment extends Fragment {
 
                 TextView tvName = (TextView) view.findViewById(R.id.tvName);
                 tvName.setText(parking.getStreetName());
+                //tvName.setText(parking.toString());
             }
         };
 
