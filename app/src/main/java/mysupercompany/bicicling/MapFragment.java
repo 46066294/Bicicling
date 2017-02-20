@@ -155,13 +155,24 @@ public class MapFragment extends Fragment {
                     );
 
                     marker.setPosition(point);
-
                     marker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
-                    marker.setIcon(getResources().getDrawable(R.drawable.parking));
+
                     marker.setTitle(parking.getStreetName());
                     //marker.setSubDescription(parking.getType());
                     marker.setSubDescription(parking.textLocaionOnMarker());
-                    marker.setAlpha(0.6f);
+                    //marker.setAlpha(0.6f);
+                    if(parking.getIndicator() <= 25){
+                        marker.setIcon(getResources().getDrawable(R.drawable.circleone));
+                    }
+                    else if (parking.getIndicator() <= 50 && parking.getIndicator() > 25){
+                        marker.setIcon(getResources().getDrawable(R.drawable.circletwo));
+                    }
+                    else if (parking.getIndicator() <= 75 && parking.getIndicator() > 50){
+                        marker.setIcon(getResources().getDrawable(R.drawable.circleth));
+                    }
+                    else if (parking.getIndicator() <= 95 && parking.getIndicator() > 75){
+                        marker.setIcon(getResources().getDrawable(R.drawable.circlefour));
+                    }
 
                     parkingMarkers.add(marker);
                 }

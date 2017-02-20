@@ -107,7 +107,13 @@ public class Park {
     }
 
     public String textLocaionOnMarker() {
-        return  "Type= " + type;
+        return  "Tipus de bici: " + type + "\n\tBicis disponibles: " + bikes;
+    }
+
+    public float getIndicator(){
+        float totalParks = Float.parseFloat(slots) + Float.parseFloat(bikes);
+        float indicator = (Float.parseFloat(slots) / totalParks) * 100;
+        return indicator;
     }
 
     @Override
