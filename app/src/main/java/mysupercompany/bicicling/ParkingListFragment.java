@@ -1,7 +1,9 @@
 package mysupercompany.bicicling;
 
-import android.support.v4.app.Fragment;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +11,10 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+import com.firebase.client.ValueEventListener;
 import com.firebase.ui.FirebaseListAdapter;
 
 /**
@@ -32,7 +37,8 @@ public class ParkingListFragment extends Fragment {
         MyApp app = (MyApp) getActivity().getApplication();
         Firebase ref = app.getRef();
 
-        Firebase parkings = ref.child("stations");
+        final Firebase parkings = ref.child("stations");
+
         Log.d("STATIONS", parkings.toString());
 
         adapter = new FirebaseListAdapter<Park>(getActivity(), Park.class, R.layout.row, parkings) {
@@ -48,4 +54,6 @@ public class ParkingListFragment extends Fragment {
         lvParkings.setAdapter(adapter);
         return view;
     }
+
 }
+

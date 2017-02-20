@@ -160,7 +160,7 @@ public class MapFragment extends Fragment {
                     marker.setIcon(getResources().getDrawable(R.drawable.parking));
                     marker.setTitle(parking.getStreetName());
                     //marker.setSubDescription(parking.getType());
-                    marker.setSubDescription(parking.toString());
+                    marker.setSubDescription(parking.textLocaionOnMarker());
                     marker.setAlpha(0.6f);
 
                     parkingMarkers.add(marker);

@@ -106,6 +106,10 @@ public class Park {
         this.status = status;
     }
 
+    public String textLocaionOnMarker() {
+        return  "Type= " + type;
+    }
+
     @Override
     public String toString() {
         return "Park{" +
