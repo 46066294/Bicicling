@@ -61,9 +61,7 @@ public class MapFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_map, container, false);
 
         map = (MapView) view.findViewById(R.id.map);
-        map.setPositionAndScale(getActivity(),
-                new MultiTouchController.PositionAndScale(),
-                new MultiTouchController.PointInfo());
+
         Log.d("MAP ", map.toString());
 
 
@@ -88,7 +86,9 @@ public class MapFragment extends Fragment {
     private void setZoom() {
         //  Setteamos el zoom al mismo nivel y ajustamos la posición a un geopunto
         mapController = map.getController();
-        mapController.setZoom(14);
+        mapController.setZoom(10);
+        GeoPoint startPoint = new GeoPoint(41.3818, 2.1685);
+        mapController.setCenter(startPoint);
     }
 
     private void setOverlays() {
